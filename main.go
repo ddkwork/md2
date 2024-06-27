@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("md2", func(w *unison.Window) {
-		md2.New().Layout(w.Content())
+		w.Content().AddChild(md2.New().Layout())
 	})
 }
